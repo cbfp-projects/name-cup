@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Name Cup — Fred & Claire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="brand-block">
+      <p class="eyebrow">Fred &amp; Claire · due Nov 28</p>
+      <h1 class="brand">The Name Cup</h1>
+    </div>
+    <div class="top-actions">
+      <button type="button" class="ghost" id="btn-standings" hidden>Standings</button>
+      <button type="button" class="ghost" id="btn-reset" hidden>New cup</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <dialog id="standings-dialog">
+    <form method="dialog" class="dialog-sheet">
+      <header>
+        <h2>Cup standings</h2>
+        <button type="submit" class="ghost" value="close" aria-label="Close">Close</button>
+      </header>
+      <ol id="standings-list"></ol>
+      <p class="hint" id="standings-hint"></p>
+      <menu>
+        <button type="button" class="ghost" id="btn-export">Copy ranking</button>
+        <button type="submit" class="primary" value="close">Done</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="names.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
